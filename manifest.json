@@ -12,7 +12,9 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": [
+		"storage"
 	],
+	// content.js runs when URL contains reddit.com
 	"content_scripts": [
     	{
 	    	"matches": [
