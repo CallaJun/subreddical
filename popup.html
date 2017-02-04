@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Subreddical</title>
+    <style type="text/css">
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, Sans-serif;
+        font-size: 13px;
+      }
+      .main {
+        width: 200px;
+        min-height: 150px;
+        max-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Subreddical</h1>
+      Reddit History:
+      <ul id="reddit_activity"></ul>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
+

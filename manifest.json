@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+
+	"name": "Subreddical",
+	"description": "Discover your favorite subreddit",
+	"version": "0.1",
+
+	// Creating the toolbar button
+	"browser_action": {
+		// Currently Google's default. Replace later with 19x19 png.
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+	],
+	"content_scripts": [
+    	{
+	    	"matches": [
+	    		"*://reddit.com/*",
+	    		"*://www.reddit.com/*"
+	      	],
+	    	"js": ["content.js"] 
+    	}
+  	]
+}
