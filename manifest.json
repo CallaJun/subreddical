@@ -16,8 +16,8 @@
 	],
 	"background": {
 		// Event page
-		"scripts": ["onreddit.js"],
-		"persistent": false
+		"scripts": ["background.js"],
+		"persistent": true
 	},
 	// content.js runs when URL contains reddit.com
 	"content_scripts": [
@@ -26,7 +26,7 @@
 	    		"*://reddit.com/*",
 	    		"*://www.reddit.com/*"
 	      	],
-	    	"js": ["content.js"] 
+	    	"js": ["jquery-2.1.4.min.js","content.js"] 
     	}
   	]
 }
