@@ -1,6 +1,4 @@
-chrome.storage.onChanged.addListener(function(changes, local)) {
-  for (key in changes) {
-    var storage_change = changes[key];
-    alert(storage_change);
-  }
-}
+// Run when the browser action is loaded
+
+// Request reddit_activity from onreddit.js (will it have to be persistent?)
+// Somehow store reddit_activity. Download when requested.

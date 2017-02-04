@@ -14,6 +14,11 @@
 	"permissions": [
 		"storage"
 	],
+	"background": {
+		// Event page
+		"scripts": ["onreddit.js"],
+		"persistent": false
+	},
 	// content.js runs when URL contains reddit.com
 	"content_scripts": [
     	{

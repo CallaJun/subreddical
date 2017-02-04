@@ -1,5 +1,6 @@
 var url = window.location.href;
 var current_time = new Date();
 
-// store into a hashmap-ish data structure of some sort. When data is cleared, download CSV?
-// https://developer.chrome.com/extensions/storage
+// This script is run when user is on reddit.com, as detected by match criteria in manifest.json
+// Sends message to onreddit.js with current url and time
+chrome.runtime.sendMessage("Visited \"" + url + "\" at " + current_time);
