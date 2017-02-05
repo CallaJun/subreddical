@@ -17,16 +17,18 @@ function refreshPopup() {
 function clearActivity() {
   // Download CSV
   chrome.storage.local.get('activity', function(data) {
-      var result = JSON.stringify(data);
-
-      // Save as file
-      var url = 'data:application/json;base64,' + btoa(result);
-      chrome.downloads.download({
-          url: url,
-          filename: 'subreddical_activity.json'
-      });
+      var csvData = "";
+      for (var i = 0; i < data.activity.length; i++) {
+        csvData += data.activity[i] + ","; // Replace comma with actual row delimiter
+      }
+      console.log(csvData);
+      var link = document.createElement("a");
+      link.download = "file.csv";
+      link.href = "data:text/csv," + csvData;
+      document.body.appendChild(link);
+      link.click();
   });
-
+  // Clear activity
   chrome.extension.getBackgroundPage().clearActivity();
   refreshPopup();
 }
