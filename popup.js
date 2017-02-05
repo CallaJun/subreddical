@@ -5,6 +5,10 @@ var otherWindows = chrome.extension.getBackgroundPage();
 var newActivity = otherWindows.passArrayToPopup();
 
 // TODO: Place newActivity into storage. Display storage in innerHTML.
+/* Alternatively, keep global var in background. When popup run,
+pull it. When clear button hit, send request to background to clear global
+var.
+*/
 
 // Stick array into unordered HTML list
 var ulist = "<ul>";
