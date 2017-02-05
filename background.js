@@ -1,14 +1,17 @@
-var redditActivityArray = [];
+// Global var of reddit activity
+var activity = [];
 
 // A script that runs when content page detects user is on reddit.com
 chrome.runtime.onMessage.addListener(function(response, sender, send_response) {
-	redditActivityArray.push(response);
-	//alert(redditActivityArray.length);
+	activity.push(response);
 });
 
-// Clears redditActivityArray, its data onto popup
+// Passes redditActivityArray to popup
 function passArrayToPopup() {
-	var newRedditActivityArray = redditActivityArray;
-	redditActivityArray = [];
-	return newRedditActivityArray;
+	return activity;
+}
+
+// Clears activity when request received from popup
+function clearActivity() {
+	activity = [];
 }
