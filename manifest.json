@@ -12,7 +12,8 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": [
-		"storage"
+		"storage",
+		"downloads"
 	],
 	"background": {
 		// Event page
